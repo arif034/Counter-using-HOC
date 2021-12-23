@@ -14,6 +14,7 @@ const HOCComponent = (OldComponent) => {
           count: prevState.count + 1
         };
       });
+      localStorage.setItem("count", this.state.count);
     };
     render() {
       return <OldComponent count={this.state.count} setCount={this.setCount} />;
